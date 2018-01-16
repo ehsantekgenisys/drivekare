@@ -1,0 +1,77 @@
+<div class="wrapper">
+  <div class="page-header" style="background-image: url('../assets/img/BG13.jpg');">
+      <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+      <div class="container">
+          <div class="row">
+
+<div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+      <div class="card card-register">
+          <h3 class="title">Registeration</h3>
+          <!-- <div class="social-line text-center">
+              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                  <i class="fa fa-facebook-square"></i>
+              </a>
+              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                  <i class="fa fa-google-plus"></i>
+              </a>
+              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                  <i class="fa fa-twitter"></i>
+              </a>
+          </div> -->
+          <form class="register-form" [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+              <label>First Name</label>
+              <input type="text" class="form-control" formControlName="firstname" placeholder="firstname">
+              <!-- <input type="text" class="form-control" validateOnBlur [validateFormControl]="form.controls['firstname']" formControlName="firstname" placeholder="firstname"> -->
+             
+              <div class="alert alert-danger" *ngIf="firstname.touched && firstname.invalid"> please enter valid firstname</div>
+
+              <label>Middle Name</label>
+              <!-- <input type="text" class="form-control" validateOnBlur [validateFormControl]="form.controls['middlename']" placeholder="middlename" formControlName="middlename"> -->
+             
+              <input type="text" class="form-control" placeholder="middlename" formControlName="middlename">
+              <div class="alert alert-danger" *ngIf="middlename.touched && middlename.invalid"> please enter valid middlename</div>
+              
+              <label>Last Name</label>
+              <input type="text" class="form-control"  placeholder="lastname" formControlName="lastname">
+             
+              <!-- <input type="text" class="form-control" validateOnBlur [validateFormControl]="form.controls['lastname']"  placeholder="lastname" formControlName="lastname"> -->
+              <div class="alert alert-danger" *ngIf="lastname.touched && lastname.invalid"> please enter valid lastname</div>
+              
+              <label>Email</label>
+              <input type="text" class="form-control"  placeholder="Email" formControlName="email">
+              
+              <!-- <input type="text" class="form-control" validateOnBlur [validateFormControl]="form.controls['email']" placeholder="Email" formControlName="email"> -->
+              <div class="alert alert-danger" *ngIf="email.touched && email.invalid"> please enter valid email</div>
+              
+              <label>Password</label>
+              <input type="password" class="form-control"  placeholder="Password" formControlName="password">
+              
+              <!-- <input type="password" class="form-control" validateOnBlur [validateFormControl]="form.controls['password']" placeholder="Password" formControlName="password"> -->
+              <div class="alert alert-danger" *ngIf="password.touched && password.invalid"> please enter valid password</div>
+              
+              <button [disabled]="form.pristine || form.invalid" class="btn btn-danger btn-block btn-round">Register</button>
+              <div class="forgot">
+                <a [routerLink]="['/login']" class="btn btn-link btn-danger">
+                   <p> Already have an account?</p>Singin
+                </a>
+                <!-- <div class="forgot">
+                    <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                </div> -->
+            </div>
+         
+            </form>
+          <!-- <div class="forgot">
+              <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+          </div> -->
+      </div>
+  </div>
+      
+          </div>
+          <div class="footer register-footer text-center">
+              <h6>&copy;{{test | date: 'yyyy'}}, made with
+                  <i class="fa fa-heart heart"></i> by Eshoon Solutions</h6>
+          </div>
+      </div>
+  </div>
+</div>
+

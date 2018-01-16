@@ -1,0 +1,181 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('../assets/img/BG13.jpg');">
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+                        <h3 class="title">Welcome</h3>
+                        <div class="social-line text-center">
+                            <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                        <form class="register-form">
+                            <label>Email</label>
+                            <input type="text" class="form-control" placeholder="Email">
+
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+
+
+                            <button [routerLink]="['/home']" class="btn btn-danger btn-block btn-round">Login</button>
+                        </form>
+                        <!-- <a  class="btn btn-link">Register</a> -->
+                        <button [routerLink]="['/register']" class="btn btn-danger btn-link">Register</button>
+
+                        <div class="forgot">
+                            <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer register-footer text-center">
+                <h6>&copy;{{test | date: 'yyyy'}}, made with
+                    <i class="fa fa-heart heart"></i> by Creative Tim</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 
+            <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+                            <h3 class="title">Welcome</h3>
+                            <div class="social-line text-center">
+                                <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                      Start of Nav Tabs
+                        <ul class="nav nav-tabs" role="tablist">
+
+                             Personal Account Tab 
+                            <li role="presentation" class="active">
+                                <a href="#personal" aria-controls="personal" role="tab" data-toggle="tab" aria-expanded="true">
+                                    <h6>Personal Account</h6>
+                                    <span>I'm looking for a job</span>
+                                </a>
+                            </li>
+
+                            <li role="presentation" class="">
+                                <a href="#company" aria-controls="company" role="tab" data-toggle="tab" aria-expanded="false">
+                                    <h6>Company Account</h6>
+                                    <span>We are hiring</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content ptb60">
+
+                            <div role="tabpanel" class="tab-pane active" id="personal">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+
+                                        <form class="register-form">
+                                        <div class="form-group">
+                                            <label>Account Number</label>
+
+                                            <input class="form-control" id="bnkacountnum" placeholder="Account Number" />
+                                            <label id="lblbnkacountnum" class="lblvalidation"></label>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Deposit Amount</label>
+                                            <input class="form-control" id="bnkamount" placeholder="Amount" />
+                                            <label id="lblbnkamount" class="lblvalidation"></label>
+
+                                        </div>
+
+                                        <div class="form-group text-center">
+
+                                            <label for="agree">By clicking Create Account, you Agree with the our
+                                                <a href="#">Terms and Conditions</a>
+                                            </label>
+
+                                        </div>
+
+                                        <div class="form-group text-center nomargin">
+                                            <button type="submit" class="btn btn-blue btn-effect" id="bnkdeposit">Deposit</button>
+                                        </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                          
+
+                            <div role="tabpanel" class="tab-pane" id="company">
+                           
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                            <form class="register-form">
+                                       
+                                        <div class="form-group">
+                                            <label>Account NO</label>
+                                            <input class="form-control" id="bnkwithdrawaccountnum" placeholder="Account Number" />
+                                            <label id="lblbnkwithdrawaccountnum" class="lblvalidation"></label>
+
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Enter Amount to Withdraw</label>
+                                            <input class="form-control" id="bnkwithdrawamount" placeholder="Amount" />
+
+                                            <label id="lblbnkwithdrawamount" class="lblvalidation"></label>
+
+
+                                        </div>
+
+
+                                        <div class="row mt20">
+                                            <div class="col-md-12 text-center">
+
+                                                <div class="form-group">
+                                                 
+                                                    <label for="agree">By clicking Create Account, you Agree with the our
+                                                        <a href="#">Terms and Conditions</a>
+                                                    </label>
+
+
+                                                </div>
+
+                                                <div class="form-group nomargin">
+                                                    <button id="bnkwithdraw" class="btn btn-blue btn-effect">Withdraw</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div> -->
